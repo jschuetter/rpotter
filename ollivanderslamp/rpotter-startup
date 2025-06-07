@@ -12,6 +12,7 @@
 ### END INIT INFO
 
 # If you want a command to always run, put it here
+source /home/pi/Python/env/rpotter-env/bin/activate
 pigpiod
 modprobe bcm2835-v4l2
 
@@ -20,7 +21,7 @@ case "$1" in
   start)
     echo "Starting rpotter"
     # run application you want to start
-    python /home/pi/rpotter.py
+    python /home/pi/Python/rpotter/rpotter.py
     ;;
   stop)
     echo "Stopping rpotter"
